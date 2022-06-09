@@ -1,85 +1,98 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Wayne's Stereo Website</title>
-        <style>
-            body {
-                background: #7B7C78;
-                color: rgb(255, 254, 254);
-                padding: 10px;
-                font-family: arial;
-            }
-            #all-contents {
-              max-width: 800px;
-                margin: auto;
-            }
-         
-            /* navigation menu */
-            nav {
-                background: #BEC5CC;
-               margin: 0 auto;
-                display: flex;
-                padding: 10px;
-                margin-bottom: 20px;
-            }
-            h1 {
-                display: flex;
-                align-items: center;
-                color: white;
-                flex: 1;
-                margin: 0;
-                text-shadow: 2px 2px 5px blue;
-            }
-            #nav-ul {
-                list-style-image: none;
-            }
-            .nav-li {
-                display: inline-block;
-                padding: 0 10px;
-            }
-            a {
-                text-decoration: none;
-                color: #fff;
-                text-shadow: 2px 2px 5px blue;
-            }
-         
-            /* main container area beneath menu */
-            main {
-                background: #212029;
-                display: flex;
-            }
-            .sidebar {
-                margin-right: 25px;
-                padding: 10px;
-            }
-            .sidebar-img {
-                width: 200px;
-            }
-            .content {
-                flex: 1;
-                padding: 15px;
-            }
-            #interests {
-                border: 4px silver ridge;
-                padding: 8px;
-            }
-            h2, h3 {
-                margin: 0px;
-            }
-         </style>
-    </head>
+
+<head>
+    <title>Wayne's Stereo Website</title>
+    <style>
+        body {
+            background: #7B7C78;
+            color: rgb(255, 254, 254);
+            padding: 10px;
+            font-family: arial;
+        }
+
+        #all-contents {
+            max-width: 800px;
+            margin: auto;
+        }
+
+        /* navigation menu */
+        nav {
+            background: #BEC5CC;
+            margin: 0 auto;
+            display: flex;
+            padding: 10px;
+            margin-bottom: 20px;
+
+        }
+
+        h1 {
+            display: flex;
+            align-items: center;
+            color: white;
+            flex: 1;
+            margin: 0;
+            text-shadow: 2px 2px 5px blue;
+        }
+
+        #nav-ul {
+            list-style-image: none;
+        }
+
+        .nav-li {
+            display: inline-block;
+            padding: 0 10px;
+        }
+
+        a {
+            text-decoration: none;
+            color: #fff;
+            text-shadow: 2px 2px 5px blue;
+        }
+
+        /* main container area beneath menu */
+        main {
+            background: #212029;
+            display: flex;
+        }
+
+        .sidebar {
+            margin-right: 25px;
+            padding: 10px;
+        }
+
+        .sidebar-img {
+            width: 200px;
+        }
+
+        .content {
+            flex: 1;
+            padding: 15px;
+        }
+
+        #interests {
+            border: 4px silver ridge;
+            padding: 8px;
+        }
+
+        h2,
+        h3 {
+            margin: 0px;
+        }
+    </style>
+</head>
 
 
 <body>
     <!-- All content goes here -->
-    <div <div id="all-contents"></div>>
+    <div id="all-contents">
         <nav>
             <h1>Wayne's Stereo Website</h1>
-            <ul>
-                <li>
+            <ul id="nav-ul">
+                <li class="nav-li">
                     <a href="index.html"> Home </a>
                 </li>
-                <li>
+                <li class="nav-li">
                     <a href="portfolio.html"> Portfolio </a>
                 </li>
             </ul>
@@ -88,15 +101,15 @@
         <main>
             <!-- Sidebar section -->
             <div>
-            <img src="/img/Stereo (1).jpeg"
+                <img "sidebar-img" src="/img/Stereo (1).jpeg">
             </div>
 
             <!-- Content section -->
-            <div>
+            <div class="content">
                 <h2>Wayne</h2>
                 <p>Best Stereo</p>
                 <!-- Interests section -->
-                <div>
+                <div "interests">
                     <h3>Interests</h3>
                     <ul>
                         <li>Stereophonic Sound</li>
@@ -109,4 +122,5 @@
         </main>
     </div>
 </body>
+
 </html>

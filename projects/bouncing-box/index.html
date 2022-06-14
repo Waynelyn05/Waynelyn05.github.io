@@ -8,13 +8,13 @@
 		.box {
 			width: 70px;
 			height: 70px;
-			background-color: teal;
+			background-color: rgb(255, 89, 0);
 			font-size: 300%;
 			text-align: center;
 			display: block;
 			position: absolute;
-			top: 100px;
-			left: 0px;  /* <--- Change me! */
+			top: 650px;
+			left: 400px;  /* <--- Change me! */
 		}
 		.board{
 			height: 100vh;
@@ -61,7 +61,7 @@
 			//////////////////////////////////////////////////////////////////
 			
 			// TODO 2 - Variable declarations 
-			
+			var myVariable = someValue
 
 			
 			/* 
@@ -70,7 +70,12 @@
 			turn it around! 
 			*/
 			function update() {
-				
+				moveBoxTo(boardWidth)
+				moveBoxTo(0)
+				moveBoxTo(10)
+				moveBoxTo(20)
+				moveBoxTo(positionX);
+				myVariable = myVariable + 10;
 
 			};
 

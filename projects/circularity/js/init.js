@@ -26,12 +26,17 @@ var init = function (window) {
 
         function drawCircle() {
             circle = draw.randomCircleInArea(canvas, true, true, '#999', 2);
-            physikz.addRandomVelocity(circle, canvas, 4, 3);
+            physikz.addRandomVelocity(circle, canvas, 4, 4);
             view.addChild(circle);
             circles.push(circle);
         }
 
         // TODO 3 / 7 : Call the drawCircle() function 
+        drawCircle();
+        drawCircle();
+        drawCircle();
+        drawCircle();
+        drawCircle();
         drawCircle();
         drawCircle();
         drawCircle();
@@ -54,6 +59,12 @@ var init = function (window) {
             physikz.updatePosition(circles[2]);
             physikz.updatePosition(circles[3]);
             physikz.updatePosition(circles[4]);
+            physikz.updatePosition(circles[5]);
+            physikz.updatePosition(circles[6]);
+            physikz.updatePosition(circles[7]);
+            physikz.updatePosition(circles[8]);
+            physikz.updatePosition(circles[9]);
+
 
             // TODO 5 / 10 : Call game.checkCirclePosition() on your circles.
             game.checkCirclePosition(circles[0]);
@@ -61,6 +72,11 @@ var init = function (window) {
             game.checkCirclePosition(circles[2]);
             game.checkCirclePosition(circles[3]);
             game.checkCirclePosition(circles[4]);
+            game.checkCirclePosition(circles[5]);
+            game.checkCirclePosition(circles[6]);
+            game.checkCirclePosition(circles[7]);
+            game.checkCirclePosition(circles[8]);
+            game.checkCirclePosition(circles[9]);
 
             // TODO 9 : Iterate over the array
 
@@ -78,9 +94,13 @@ var init = function (window) {
             if (circle.x > canvas.width) {
                 circle.x = 0;
             }
+            if (circle.y > canvas.height) {
+                circle.y = 0;
+            }
+            
 
             // TODO 6 : YOUR CODE STARTS HERE //////////////////////
-
+            var rightEdge = circle.x + circle.radius;
 
 
             // YOUR TODO 6 CODE ENDS HERE //////////////////////////

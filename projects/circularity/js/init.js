@@ -94,10 +94,23 @@ var init = function (window) {
             if (circle.x > canvas.width) {
                 circle.x = 0;
             }
+
+            // if the circle has gone past the BOTTOM side of the screen then place it on the TOP
             if (circle.y > canvas.height) {
                 circle.y = 0;
             }
-            
+
+            // TOO DUE fix the statements below
+            // if the circle has gone past the LEFT side of the screen then place it on the RIGHT
+            if (circle.y > canvas.height) {
+                circle.y = 0;
+            }
+
+            // if the circle has gone past the TOP side of the screen then place it on the BOTTOM
+            if (circle.y > canvas.height) {
+                circle.y = 0;
+            }
+
 
             // TODO 6 : YOUR CODE STARTS HERE //////////////////////
             var rightEdge = circle.x + circle.radius;

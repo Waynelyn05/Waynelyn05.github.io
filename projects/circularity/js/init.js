@@ -26,23 +26,16 @@ var init = function (window) {
 
         function drawCircle() {
             circle = draw.randomCircleInArea(canvas, true, true, '#999', 2);
-            physikz.addRandomVelocity(circle, canvas, 4, 4);
+            physikz.addRandomVelocity(circle, canvas, 10, 10);
             view.addChild(circle);
             circles.push(circle);
         }
 
         // TODO 3 / 7 : Call the drawCircle() function 
-        drawCircle();
-        drawCircle();
-        drawCircle();
-        drawCircle();
-        drawCircle();
-        drawCircle();
-        drawCircle();
-        drawCircle();
-        drawCircle();
-        drawCircle();
 
+        for (var loopsCompleted = 0; loopsCompleted < 100; loopsCompleted++) {
+            drawCircle()
+        }
         ////////////////////////////////////////////////////////////
         ///////////////// PROGRAM LOGIC ////////////////////////////
         ////////////////////////////////////////////////////////////
@@ -54,32 +47,35 @@ var init = function (window) {
         */
         function update() {
             // TODO 4 : Update the circle's position //
-            physikz.updatePosition(circles[0]);
-            physikz.updatePosition(circles[1]);
-            physikz.updatePosition(circles[2]);
-            physikz.updatePosition(circles[3]);
-            physikz.updatePosition(circles[4]);
-            physikz.updatePosition(circles[5]);
-            physikz.updatePosition(circles[6]);
-            physikz.updatePosition(circles[7]);
-            physikz.updatePosition(circles[8]);
-            physikz.updatePosition(circles[9]);
+            // physikz.updatePosition(circles[0]);
+            // physikz.updatePosition(circles[1]);
+            // physikz.updatePosition(circles[2]);
+            // physikz.updatePosition(circles[3]);
+            // physikz.updatePosition(circles[4]);
+            // physikz.updatePosition(circles[5]);
+            // physikz.updatePosition(circles[6]);
+            // physikz.updatePosition(circles[7]);
+            // physikz.updatePosition(circles[8]);
+            // physikz.updatePosition(circles[9]);
 
 
             // TODO 5 / 10 : Call game.checkCirclePosition() on your circles.
-            game.checkCirclePosition(circles[0]);
-            game.checkCirclePosition(circles[1]);
-            game.checkCirclePosition(circles[2]);
-            game.checkCirclePosition(circles[3]);
-            game.checkCirclePosition(circles[4]);
-            game.checkCirclePosition(circles[5]);
-            game.checkCirclePosition(circles[6]);
-            game.checkCirclePosition(circles[7]);
-            game.checkCirclePosition(circles[8]);
-            game.checkCirclePosition(circles[9]);
+            // game.checkCirclePosition(circles[0]);
+            // game.checkCirclePosition(circles[1]);
+            // game.checkCirclePosition(circles[2]);
+            // game.checkCirclePosition(circles[3]);
+            // game.checkCirclePosition(circles[4]);
+            // game.checkCirclePosition(circles[5]);
+            // game.checkCirclePosition(circles[6]);
+            // game.checkCirclePosition(circles[7]);
+            // game.checkCirclePosition(circles[8]);
+            // game.checkCirclePosition(circles[9]);
 
             // TODO 9 : Iterate over the array
-
+            for (var i  = 0; i < circles.length; i++){
+                game.checkCirclePosition(circles[i]);
+                physikz.updatePosition(circles[i]);
+            }
 
         }
 
@@ -102,13 +98,13 @@ var init = function (window) {
 
             // TOO DUE fix the statements below
             // if the circle has gone past the LEFT side of the screen then place it on the RIGHT
-            if (circle.y > canvas.height) {
-                circle.y = 0;
+            if (circle.x < 0) {
+                circle.x = canvas.width;
             }
 
             // if the circle has gone past the TOP side of the screen then place it on the BOTTOM
-            if (circle.y > canvas.height) {
-                circle.y = 0;
+            if (circle.y < 0) {
+                circle.y = canvas.height;
             }
 
 

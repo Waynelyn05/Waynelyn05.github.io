@@ -20,8 +20,8 @@ function resetAndRender() {
 // all of your apply functions
 function applyAndRender() {
   // Multiple TODOs: Call your apply function(s) here
-  applyFilter()
-
+  applyFilter(reddify)
+  var filterFunction = applyFilter(reddify);
 
   // do not change the below line of code
   render($("#display"), image);
@@ -32,13 +32,13 @@ function applyAndRender() {
 /////////////////////////////////////////////////////////
 
 // TODO 1, 2 & 4: Create the applyFilter function here
-function applyFilter() {
+function applyFilter(filterFunction) {
   for (var i = 0; i < image.length; i++) {
     var row = image[i];
     for (var k = 0; k < row.length; k++) {
       var rgbString = row[k]
       var rgbNumbers = rgbStringToArray(rgbString)
-      rgbNumbers[RED] = 255;
+      filterFunction(rgbNumbers)
       rgbString = rgbArrayToString(rgbNumbers) //call the Array String with an argument inside.
       row[k] = rgbString //assign the the string back to its array
 
@@ -49,10 +49,21 @@ function applyFilter() {
 
 
 // TODO 5: Create the keepInBounds function
+function keepInBounds(num){
+  var x = 0;
+  var x = 255;
+  var bigger = Math.max(num, 0);
+  var solution = Math.min(bigger , 255);
 
+}
 
 // TODO 3: Create reddify function 
-function reddify()
+function reddify(arr) {
+arr [RED] = 200
+
+}
+
+
 
 // TODO 6: Create more filter functions
 

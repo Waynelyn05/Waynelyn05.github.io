@@ -1,0 +1,22 @@
+
+body {
+  background-color: rgb(43, 43, 38);
+}
+
+#board {
+  width: 440px;
+  height: 440px;
+  border: 1px solid rgb(252, 251, 251);
+  background-color: rgb(28, 26, 26);
+  position: relative;
+}
+
+#walker {
+  border-radius:50px; 
+  background-color: rgb(57, 11, 240);
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  left: 100px; /* Uncomment if you want to set a "starting" position */
+  top: 100px; /* Uncomment if you want to set a "starting" position */
+}

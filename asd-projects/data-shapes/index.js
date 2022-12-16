@@ -86,8 +86,14 @@ function handleGood(color, shape, repeat){
 
   function goodDisplay() {
     // TODO 4-b: call your handleGood function
-    var currentShape
-             
+    function handleGood(color, shape, repeat)
+    var currentShape = {
+      color: "blue",
+      shape: "circle",
+      repeat: 3
+      
+    };
+    
   }
 
   function badDisplay() {

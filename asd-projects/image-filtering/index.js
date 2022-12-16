@@ -49,23 +49,28 @@ function applyFilter(filterFunction) {
 
 
 // TODO 5: Create the keepInBounds function
-function keepInBounds(num){
+function keepInBounds(num) {
   var x = 0;
   var x = 255;
   var bigger = Math.max(num, 0);
-  var solution = Math.min(bigger , 255);
-
+  var solution = Math.min(bigger, 255);
+  
 }
 
 // TODO 3: Create reddify function 
 function reddify(arr) {
-arr [RED] = 200
+  arr[RED] = 200
 
 }
-
+console.log(keepInBounds(-30)); // should print 0
+console.log(keepInBounds(300)); // should print 255
+console.log(keepInBounds(127)); // should print 127
 
 
 // TODO 6: Create more filter functions
-
+function decreaseBlue(arr){
+arr[BLUE] = arr[Blue] - 50;
+arr[BLUE] = keepInBounds(result)
+}
 
 // CHALLENGE code goes below here
